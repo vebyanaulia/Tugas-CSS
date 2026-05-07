@@ -1,51 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Sign Up</title>
+    <style>
+        /* Reset & Base Style */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
+
+        /* Judul */
+        h1 {
+            color: #000080; /* Dark Blue */
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            color: #2e7d32; /* Green */
+            margin-bottom: 25px;
+        }
+
+        /* Container Form */
+        .card-form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Grouping Element */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        /* Input Teks, Select, dan Textarea */
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #000080;
+        }
+
+        /* Styling Radio & Checkbox */
+        .option-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .option-group input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Textarea resize control */
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Tombol Submit */
+        .btn-submit {
+            background-color: #0000cd;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #00008b;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
+<body>
 
-<body style="background-color: lightgray; font-family: Times New Roman;">
+    <h1>Buat Account Baru</h1>
+    <h3>Sign Up Form</h3>
 
-    <h2>Buat Account Baru</h2>
-    <h4>Sign Up Form</h4>
+    <div class="card-form">
+        <form action="welcome.html" method="GET">
+            
+            <div class="form-group">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="firstname" placeholder="Masukkan nama depan" required>
+            </div>
 
-    <form action="welcome.html" method="GET">
+            <div class="form-group">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lastname" placeholder="Masukkan nama belakang" required>
+            </div>
 
-        <!-- First Name -->
-        <label>First name :</label><br>
-        <input type="text" name="firstname"><br><br>
+            <div class="form-group">
+                <label>Gender:</label>
+                <label class="option-group"><input type="radio" name="gender" value="male"> Male</label>
+                <label class="option-group"><input type="radio" name="gender" value="female"> Female</label>
+                <label class="option-group"><input type="radio" name="gender" value="other"> Other</label>
+            </div>
 
-        <!-- Last Name -->
-        <label>Last name :</label><br>
-        <input type="text" name="lastname"><br><br>
+            <div class="form-group">
+                <label for="nation">Nationality:</label>
+                <select id="nation" name="nationality">
+                    <option value="indonesian">Indonesian</option>
+                    <option value="singaporean">Singaporean</option>
+                    <option value="malaysian">Malaysian</option>
+                    <option value="australian">Australian</option>
+                </select>
+            </div>
 
-        <!-- Gender -->
-        <label>Gender</label><br>
-        <input type="radio" name="gender" value="Male"> Male <br>
-        <input type="radio" name="gender" value="Female"> Female <br><br>
+            <div class="form-group">
+                <label>Language Spoken:</label>
+                <label class="option-group"><input type="checkbox" name="lang" value="id"> Bahasa Indonesia</label>
+                <label class="option-group"><input type="checkbox" name="lang" value="en"> English</label>
+                <label class="option-group"><input type="checkbox" name="lang" value="ot"> Other</label>
+            </div>
 
-        <!-- Nationality -->
-        <label>Nationality</label><br>
-        <select name="nationality">
-            <option value="Indonesia">Indonesia</option>
-            <option value="Malaysia">Malaysia</option>
-            <option value="Singapore">Singapore</option>
-        </select><br><br>
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Ceritakan sedikit tentang dirimu..."></textarea>
+            </div>
 
-        <!-- Language -->
-        <label>Language Spoken</label><br>
-        <input type="checkbox" name="language" value="Bahasa Indonesia"> Bahasa Indonesia <br>
-        <input type="checkbox" name="language" value="English"> English <br>
-        <input type="checkbox" name="language" value="Other"> Other <br><br>
+            <button type="submit" class="btn-submit">Sign Up</button>
 
-        <!-- Bio -->
-        <label>Bio</label><br>
-        <textarea name="bio" rows="5" cols="30"></textarea><br><br>
-
-        <!-- Button -->
-        <input type="submit" value="Sign Up">
-
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>

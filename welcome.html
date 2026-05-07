@@ -1,23 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+
+    <style>
+
+        /* 10 Selektor CSS Internal */
+
+        /* 1 */
+        body{
+            font-family: Arial;
+            background-color: #f0f8ff;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* 2 */
+        h1{
+            color: darkblue;
+        }
+
+        /* 3 */
+        h3{
+            color: green;
+        }
+
+        /* 4 */
+        p{
+            font-size: 18px;
+        }
+
+        /* 5 */
+        .box{
+            background-color: yellow;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* 6 */
+        #judul{
+            text-transform: uppercase;
+        }
+
+        /* 7 */
+        div p{
+            color: purple;
+        }
+
+        /* 8 */
+        a:hover{
+            color: red;
+        }
+
+        /* 9 */
+        button{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+
+        /* 10 */
+        button:hover{
+            background-color: orange;
+        }
+
+    </style>
 </head>
 
-<body style="background-color: lightgray; font-family: Times New Roman;">
+<body>
 
-    <h1>SELAMAT DATANG!</h1>
+    <h1 id="judul">SELAMAT DATANG!</h1>
 
-    <p>
-        Terima kasih telah bergabung di Website Kami. 
-        Media Belajar kita bersama!
-    </p>
+    <h3>
+        Terima kasih telah bergabung website kami,
+        media belajar kita bersama
+    </h3>
+
+    <div class="box">
+        <p>Belajar HTML dan CSS</p>
+    </div>
 
     <br>
 
-    <!-- Link ke halaman lain -->
-    <a href="data.html">Lihat Data Siswa</a> <br><br>
-    <a href="index.html">Kembali ke Home</a>
+    <a href="#">Klik Disini</a>
+
+    <br><br>
+
+    <button>Mulai Belajar</button>
 
 </body>
 </html>

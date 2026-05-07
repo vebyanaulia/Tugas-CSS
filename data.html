@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Data Siswa</title>
+    <meta charset="UTF-8">
+
+    <title>Daftar Data Siswa</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+<body>
 
-<body style="background-color: lightgray; font-family: Times New Roman;">
+    <div class="container">
 
-    <h2>Data Nilai Siswa</h2>
+        <h2>Daftar Nilai Siswa</h2>
 
-    <table border="1" cellpadding="10">
-        <tr>
-            <th rowspan="2">Nama</th>
-            <th colspan="3" style="background-color: yellow;">Nilai</th>
-        </tr>
-        <tr>
-            <th>Kimia</th>
-            <th>Fisika</th>
-            <th>Biologi</th>
-        </tr>
+        <table>
 
-        <tr>
-            <td>Raka</td>
-            <td>76</td>
-            <td>80</td>
-            <td>81</td>
-        </tr>
+            <thead>
 
-        <tr>
-            <td>Nathan</td>
-            <td>84</td>
-            <td>70</td>
-            <td>75</td>
-        </tr>
+                <tr>
+                    <th rowspan="2" class="nama">Nama</th>
+                    <th colspan="3" class="nilai">Nilai</th>
+                </tr>
 
-        <tr>
-            <td>Chiko</td>
-            <td>96</td>
-            <td>70</td>
-            <td>71</td>
-        </tr>
-    </table>
+                <tr>
+                    <th>Kimia</th>
+                    <th>Fisika</th>
+                    <th>Biologi</th>
+                </tr>
 
-    <br><br>
+            </thead>
 
-    <!-- Link navigasi -->
-    <a href="index.html">Kembali ke Home</a> <br><br>
-    <a href="form.html">Kembali ke Form</a>
+            <tbody>
+
+                <tr>
+                    <td>Nathan</td>
+                    <td>76</td>
+                    <td>80</td>
+                    <td>81</td>
+                </tr>
+
+                <tr>
+                    <td>Raka</td>
+                    <td>84</td>
+                    <td>70</td>
+                    <td>75</td>
+                </tr>
+
+                <tr>
+                    <td>Andra</td>
+                    <td>96</td>
+                    <td>70</td>
+                    <td>71</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
 
 </body>
 </html>
